@@ -38,8 +38,8 @@ function guardarDatos(usuarios) {
 } //como si nos refirieramos a una tabla usuarios
 //Leer datos: es usar el método on y encuchar el evento 'value'
 database.ref("/usuarios").on('value', function (snapshot) { //snapshot la captura de los ultimos datos que obtuvo
-    var usuario = snapshot.val();
-    console.log(usuario);
+    var usuarios = snapshot.val();
+    console.log(usuarios);
     objDb.usuarios =usuarios;
     mostrarDatos(usuarios);
 })
